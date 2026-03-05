@@ -1,0 +1,28 @@
+{
+  "name": "minimalissimo-about-page-clone-pammyshark",
+  "version": "1.0.0",
+  "description": "Your task is to replicate the [Minimalissimo/about](https://minimalissimo.com/suggest) site (using `FLEXBOX`, `GRID` and `responsive design`).",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cornerstone-CICCC/minimalissimo-about-page-clone-pammyshark.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Cornerstone-CICCC/minimalissimo-about-page-clone-pammyshark/issues"
+  },
+  "homepage": "https://github.com/Cornerstone-CICCC/minimalissimo-about-page-clone-pammyshark#readme",
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

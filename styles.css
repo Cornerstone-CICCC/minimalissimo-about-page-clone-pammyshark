@@ -1,0 +1,119 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; padding-top: 60px; }
+
+/* Global Grid Setup */
+.grid-3 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    border-top: 1px solid black; }
+
+.grid-3-new { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+}
+
+.merge-cell{
+    grid-column: span 2
+}
+.grid-2 { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.border-aux{
+    border-left: 1px solid black;
+}
+
+.cell { 
+    border-right: 1px solid black; 
+    border-bottom: 1px solid black; 
+    padding: 25px; 
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 25px;
+    }
+
+.cell:nth-child(3n) { 
+    border-right: none;
+ }
+
+.cell:not(.no-hover):hover {
+    background: black;
+    color: white;
+}
+
+.no-cell { 
+   margin-top: 30mm;
+   margin-bottom: 30mm;
+    padding: 25px; 
+    cursor: pointer;
+    }
+/* title-section */
+.title-section .cell {
+    border-right: none;
+    padding: 30mm;
+}
+.medium-padding {
+    padding-bottom: 30mm;
+}
+
+/* Underline */
+a {
+    color: black;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+a:hover input {
+    background-color: black;
+    color: white;
+}
+/* Header */
+.header { position: fixed; top: 0; width: 100%; background: white; z-index: 1000; border-bottom: 1px solid black; }
+.header .cell { border-bottom: none; border-right: 1px solid black; }
+
+/* Newsletter*/
+.newsletter-section .cell { 
+    border-bottom: 1px solid black; }
+/* Numbers*/
+.editorial-list {
+    list-style: none; 
+    counter-reset: my-counter 0;
+}
+
+.editorial-list li {
+    counter-increment: my-counter;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.editorial-list li::before {
+    content: counter(my-counter, decimal-leading-zero) ". ";
+    margin-right: 15px; /* Space between number and text */
+    min-width: 25px;
+}
+
+
+/* About Grid (2 column) */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; border-left: 1px solid black; border-right: 1px solid black; }
+.about-text { padding: 40px; border-right: 1px solid black; }
+.about-image {
+    /* Increase this to push the image inwards */
+    padding: 40px; 
+    
+    /* Ensure the image stays inside the box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    /* This makes sure the image scales down to fit the new padding */
+    width: 100%;
+    height: auto;
+}
